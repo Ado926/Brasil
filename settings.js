@@ -50,7 +50,7 @@ global.yukiJadibts = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = '⪛✰ 𝐘𝐮𝐤𝐢-𝐒𝐮𝐨𝐮-𝐁𝐨𝐭 ✰⪜'
+global.packname = '⪛✰sᥙmі sᥲkᥙrᥲsᥲᥕᥲ✰⪜'
 global.botname = '🌸sᥙmі sᥲkᥙrᥲsᥲᥕᥲ🌸'
 global.wm = 'ৎ୭࠭͢sᥙmі-ᑲ᥆𝗍𓆪͟͞ '
 global.author = 'Made By ৎ୭࠭͢𓆩𝕷͢𝖊𝖔፝֟፝֟፝֟፝֟፝֟፝֟𝖓𝖊𝖑𓆪'
@@ -61,8 +61,8 @@ global.etiqueta = 'ৎ୭࠭͢𓆩𝕷͢𝖊𝖔፝֟፝֟፝֟፝֟፝֟፝֟�
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.moneda = 'coin'
-global.welcom1 = '❍ Edita Con El Comando setwelcome'
-global.welcom2 = '❍ Edita Con El Comando setbye'
+global.welcom1 = '✎ Edita Con El Comando setwelcome'
+global.welcom2 = '✎ Edita Con El Comando setbye'
 global.banner = 'https://files.catbox.moe/gmmf3h.jpg'
 global.avatar = 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1742678797993.jpeg'
 
