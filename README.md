@@ -1,6 +1,6 @@
 <h1 align="center">❀ sumi sakurasawa❀</h1>
 
- <img src= "https://files.catbox.moe/om9jai.jpg">
+ <img src= "https://qu.ax/JnOaO.jpg">
     </p>
 
 ### **`❕️ Información importante`**
