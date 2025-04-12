@@ -68,7 +68,7 @@ global.avatar = 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/ma
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.gp1 = 'https://chat.whatsapp.com/Ecz881bBgqPIWjDOaKkp7E'
+global.gp1 = 'https://chat.whatsapp.com/D9hmosKv0924sPqyXeu1CU'
 global.comunidad1 = 'https://chat.whatsapp.com/EwrwcGvpLf1BnMhP3B4axD'
 global.channel = 'https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T'
 global.channel2 = 'https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T'
