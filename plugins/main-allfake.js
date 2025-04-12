@@ -102,8 +102,7 @@ var more = String.fromCharCode(8206)
 global.readMore = more.repeat(850)
 
 global.packsticker = `ᰔᩚ❀channelsumi❀ᰔᩚ
-╰https://sumi.online
-    ┆info:\n❀ Bot: ${botname}\nᰔᩚ Usuario: ${nombre}\n
+╰https://sumibot\n❀ Bot: ${botname}\nᰔᩚ Usuario: ${nombre}\n
 ✦ Fecha: ${fecha}\nⴵ Hora: ${tiempo}`;
 global.packsticker2 = `\n°leo\n\n${dev}`
   
