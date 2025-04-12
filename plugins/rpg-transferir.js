@@ -4,7 +4,7 @@ async function handler(m, { conn, args, usedPrefix, command }) {
   const bankType = 'bank';
 
   if (!args[0] || !args[1]) {
-    const helpMessage = `${emoji} Debes mencionar a quien quieras regalar *${moneda}*.\n> Ejemplo » *${usedPrefix + command} 25000 @mencion*`.trim();
+    const helpMessage = `✎ Debes mencionar a quien quieras regalar *${moneda}*.\n> Ejemplo » *${usedPrefix + command} 25000 @mencion*`.trim();
     return conn.sendMessage(m.chat, {text: helpMessage, mentions: [m.sender]}, {quoted: m});
   }
 
@@ -21,7 +21,7 @@ async function handler(m, { conn, args, usedPrefix, command }) {
   const mentionText = `@${who.split('@')[0]}`;
   const totalInBank = user[bankType];
 
-  conn.sendMessage(m.chat, {text: `${emoji} Transferiste *${count} ${moneda}⛀* a ${mentionText}\n> Ahora tienes *${totalInBank} ${moneda}⛀* en total en el banco.`, mentions: [who]}, {quoted: m});
+  conn.sendMessage(m.chat, {text: `❀ Transferiste *${count} ${moneda}⛀* a ${mentionText}\n> Ahora tienes *${totalInBank} ${moneda}⛀* en total en el banco.`, mentions: [who]}, {quoted: m});
 }
 
 handler.help = ['pay'];
