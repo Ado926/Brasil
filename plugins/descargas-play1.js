@@ -130,7 +130,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 };
 
-handler.command = handler.help = ['playvideo',  'yta', 'ytmp4', 'ytv'];
+handler.command = handler.help = ['playvideo',  'yta',  'ytv'];
 handler.tags = ['downloader'];
 handler.group = true;
 
