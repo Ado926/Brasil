@@ -16,7 +16,7 @@ let handler = async (m, { conn, text }) => {
   user.premium = true;
   user.premiumTime = +new Date() + amount * units[unit.toLowerCase()] * 60 * 1000; 
   
-  conn.reply(m.chat, `❀ ¡Felicitaciones! Ahora eres miembro premium por ${amount} ${unit}. Has gastado ${cost} ${moneda}.`, m);
+  conn.reply(m.chat, `❀ ¡Felicitaciones! Ahora eres miembro premium por ${amount} ${unit}. Has gastado ${cost} ${moneda}⛀.`, m);
 };
 
 handler.help = ['comprarpremium'];
