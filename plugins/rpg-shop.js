@@ -15,7 +15,7 @@ const handler = async (m, {conn, command, args}) => {
 ║│ *Gastado* : -${xppercoin * count} XP
 ║╰──────────────┄
 ╚═══════⩽✰⩾═══════╝`, m);
-  } else conn.reply(m.chat, `${emoji2} Lo siento, no tienes suficiente *XP* para comprar *${count}* ${moneda} ⛀`, m);
+  } else conn.reply(m.chat, `《✧》 Lo siento, no tienes suficiente *XP* para comprar *${count}* ${moneda} ⛀`, m);
 };
 handler.help = ['Buy', 'Buyall'];
 handler.tags = ['economy'];
