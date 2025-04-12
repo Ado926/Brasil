@@ -6,10 +6,10 @@ const handler = async (m, { conn, command, usedPrefix, text }) => {
 let user = global.db.data.users[m.sender];
 
 if (user.genre) {
-return conn.reply(m.chat, `${emoji2} Ya tienes un género establecido, si quieres borrar el género actual usa:\n> » ${usedPrefix}delgenre`, m);
+return conn.reply(m.chat, `《✧》 Ya tienes un género establecido, si quieres borrar el género actual usa:\n> » ${usedPrefix}delgenre`, m);
 }
 
-if (!text) return conn.reply(m.chat, `${emoji} Debes ingresar un género válido.\n> Ejemplo » *${usedPrefix + command} hombre*`, m);
+if (!text) return conn.reply(m.chat, `《✧》 Debes ingresar un género válido.\n> Ejemplo » *${usedPrefix + command} hombre*`, m);
 
 function asignarGenre(text) {
 let genre;
@@ -28,12 +28,12 @@ return genre;
 
 let genre = asignarGenre(text);
 if (!genre) {
-return conn.reply(m.chat, `${emoji2} Recuerda elegir un género válido.\n> Ejemplo: ${usedPrefix + command} hombre`, m);
+return conn.reply(m.chat, `《✧》 Recuerda elegir un género válido.\n> Ejemplo: ${usedPrefix + command} hombre`, m);
 }
 
 user.genre = genre;
 
-return conn.reply(m.chat, `${emoji} Se ha establecido tu género como: *${user.genre}*!`, m);
+return conn.reply(m.chat, `❀ Se ha establecido tu género como: *${user.genre}*!`, m);
 };
 
 handler.help = ['setgenre']
