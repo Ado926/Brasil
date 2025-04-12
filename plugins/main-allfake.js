@@ -101,7 +101,7 @@ global.taguser = '@' + m.sender.split("@s.whatsapp.net")
 var more = String.fromCharCode(8206)
 global.readMore = more.repeat(850)
 
-global.packsticker = `࣭╭─ꟷ⃯݁┅۪݁ꪒֵ݁𝒍ּ݁❀ᰍ۪݁╼᮫࣭۟┅ׅ۫ᰰ̹ᩫ⵿─╮\n Bot:${botname}\n👑 Usuario: ${nombre}\n✎Fecha: ${fecha}\nⴵ Hora: ${tiempo}`;
+global.packsticker = `ᰔᩚ❀sumichannel❀ᰔᩚ\n Bot:${botname}\n👑 Usuario: ${nombre}\n✎Fecha: ${fecha}\nⴵ Hora: ${tiempo}`;
 global.packsticker2 = `\n︵۪ׄ┅̤ׄ─⃔͜┉࣪━〫֮❀┉⃨࣪━〫֮─⃕͜°\n\n${dev}`
   
 //Fakes
