@@ -28,9 +28,9 @@ console.log(`Error : ${e}`)
 }}
   
 //creador y otros
-global.creador = 'Wa.me/584120346669'
+global.creador = 'Wa.me/393715279301'
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
-global.asistencia = 'Wa.me/584120346669'
+global.asistencia = 'Wa.me/393715279301'
 global.namechannel = '❀ sᥙmі ᥴһᥲᥒᥒᥱᥣ • ᥲ᥎іs᥆s ❀'
 global.namechannel2 = '❀ sᥙmі ᥴһᥲᥒᥒᥱᥣ • ᥲ᥎іs᥆s ❀'
 global.namegrupo = '❀ sᥙmі sᥲkᥙrᥲsᥲᥕᥲ• ᥆𝖿іᥴіᥲᥣ ❀'
