@@ -36,7 +36,7 @@ let handler = async (m, { conn }) => {
 
         let txt = `*「✿」Usuario* ◢ ${name} ◤\n\n`;
         txt += `✦ Nivel » *${user.level}*\n`;
-        txt += `✰ Experiencia » *${user.exp}*\n`;
+        txt += `✥ Experiencia » *${user.exp}*\n`;
         txt += `❖ Rango » ${user.role}\n`;
         txt += `➨ Progreso » *${user.exp - min} => ${xp}* _(${Math.floor(((user.exp - min) / xp) * 100)}%)_\n`;
         txt += `# Puesto » *${rank}* de *${sortedLevel.length}*\n`;
