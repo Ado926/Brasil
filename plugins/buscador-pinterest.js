@@ -51,7 +51,7 @@ const handler = async (m, { conn, text }) => {
 };
 
 handler.help = ['pinterest <término>'];
-handler.tags = ['img'];
+handler.tags = ['pin'];
 handler.register = true;
 handler.command = ['pinterest'];
 
