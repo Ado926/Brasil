@@ -1,4 +1,4 @@
-kimport moment from 'moment-timezone'
+//kimport moment from 'moment-timezone'
 //import fetch from 'node-fetch'
 
 let handler = async (m, { conn, args }) => {
