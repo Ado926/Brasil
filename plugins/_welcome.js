@@ -11,7 +11,8 @@ export async function before(m, { conn, participants, groupMetadata }) {
   let img = await (await fetch(`${pp}`)).buffer()
 
     if (chat.welcome && m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_ADD) {
-      let bienvenida = `❀ *Bienvenido* a ${groupMetadata.subject}\n ✰ ${taguser}\n${global.welcom1}\n •(=^●ω●^=)• Disfruta tu estadía en el grupo!\n> ✐ Puedes usar *#help* para ver la lista de comandos.`
+      let bienvenida = `❀ *Bienvenido* a ${groupMetadata.subject}\n ✰ ${taguser}\n${global.welcom1}\n •(=^●ω●^=)• Disfruta tu estadía en el grupo!\n> ✐ Puedes usar *#help* para ver la lista de comandos.
+> 🜸 https://bit.ly/sumioficial.`
       await conn.sendMessage(m.chat, { image: img, caption: bienvenida, mentions: [who] })
     }
        
