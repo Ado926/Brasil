@@ -41,8 +41,8 @@ let handler = async (m, { conn, text }) => {
     const apiData = await fetchWithRetries(apiUrl);
 
     //await conn.sendMessage(m.chat, {
-      image: { url: video.thumbnail },
-      caption: `*「✦」descargando ${video.title}*
+     // image: { url: video.thumbnail },
+      //caption: `*「✦」descargando ${video.title}*
 
 > ✦ Canal » *${video.author.name}*\n> ✰ *Vistas:* » ${video.views}\n> ⴵ *Duración:* » ${video.timestamp}\n> ✐  *Autor:* » ${video.author.name}`,
 
