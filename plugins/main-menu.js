@@ -24,8 +24,7 @@ Aquí tienes la lista de comandos
 ✐; 🌸→ ᴘᴀʀᴀ ᴄʀᴇᴀʀ ᴜɴ sᴜʙ-ʙᴏᴛ ᴄᴏɴ ᴛᴜ ɴᴜᴍᴇʀᴏ ᴜᴛɪʟɪᴢᴀ *#qr* o *#code*
 
  
-
-»  ⊹˚୨ •(=^●ω●^=)• *info-bot*   🌸
+»  ⊹˚୨ •(=^●ω●^=)• *info-bot*  ❀   
 
 
 ᥫ᭡ Comandos para ver estado e información de la Bot.
