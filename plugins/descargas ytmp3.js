@@ -69,7 +69,7 @@ const ddownr = {
 const handler = async (m, { conn, text, usedPrefix, command }) => {
   try {
     if (!text.trim()) {
-      return conn.reply(m.chat, `✎ ingresa el nombre de la música a descargar.`, m);
+      return conn.reply(m.chat, `✎ Ingresa el nombre de la música o video que quieres descargar.`, m);
     }
 
     const search = await yts(text);
@@ -77,17 +77,20 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
       return m.reply('No se encontraron resultados para tu búsqueda.');
     }
 
+    // Declarar e inicializar videoInfo correctamente
     const videoInfo = search.all[0];
     const { title, thumbnail, timestamp, views, ago, url } = videoInfo;
     const vistas = formatViews(views);
     const infoMessage = `「✦」Descargando *<${title}>*\n\n> ✦ Canal » *${videoInfo.author.name || 'Desconocido'}*\n> ✰ Vistas » *${views}*\n> ⴵ Duración » *${timestamp}*\n> ✐ Publicación » *${ago}*\n> 🜸 Link » ${url}\n`;
-       const thumb = (await conn.getFile(thumbnail))?.data;
-m.react('🌸')
+
+    const thumb = (await conn.getFile(thumbnail))?.data;
+
+    m.react('🌸'); // Reacción personalizada
     const JT = {
       contextInfo: {
         externalAdReply: {
-          title: packname,
-          body: dev,
+          title: "PackName", // Personaliza esta parte
+          body: "DevName", // Personaliza esta parte
           mediaType: 1,
           previewType: 0,
           mediaUrl: url,
@@ -98,16 +101,14 @@ m.react('🌸')
       },
     };
 
-      await conn.reply(m.chat, infoMessage, m, JT);
+    await conn.reply(m.chat, infoMessage, m, JT);
 
     if (command === 'play' || command === 'yta' || command === 'mp3') {
-        const api = await ddownr.download(url, 'mp3');
-        const result = api.downloadUrl;
-        await conn.sendMessage(m.chat, { audio: { url: result }, mimetype: "audio/mpeg" }, { quoted: m });
-
+      const api = await ddownr.download(url, 'mp3');
+      const result = api.downloadUrl;
+      await conn.sendMessage(m.chat, { audio: { url: result }, mimetype: "audio/mpeg" }, { quoted: m });
     } else if (command === 'play2' || command === 'ytv' || command === 'mp4') {
-      let sources = [
-        `https://api.siputzx.my.id/api/d/ytmp4?url=${url}`,
+      let sources = [`https://api.siputzx.my.id/api/d/ytmp4?url=${url}`,
         `https://api.zenkey.my.id/api/download/ytmp4?apikey=zenkey&url=${url}`,
         `https://axeel.my.id/api/download/video?url=${encodeURIComponent(url)}`,
         `https://delirius-apiofc.vercel.app/download/ytmp4?url=${url}`
@@ -126,7 +127,7 @@ m.react('🌸')
               video: { url: downloadUrl },
               fileName: `${title}.mp4`,
               mimetype: 'video/mp4',
-              caption: ``,
+              caption: "",
               thumbnail: thumb
             }, { quoted: m });
             break;
@@ -147,7 +148,7 @@ m.react('🌸')
   }
 };
 
-handler.command = handler.help = ['play', 'play2', 'ytmp3', 'yta', 'mp4', 'ytv']; 
+handler.command = handler.help = ['ytmp3', 'yta', 'play', 'mp3', 'play2', 'ytv', 'mp4']; 
 handler.tags = ['downloader'];
 
 export default handler;
