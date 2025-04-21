@@ -40,15 +40,15 @@ global.etiqueta = '🌸 @Wirk 🌸'
 global.moneda = 'MimiCoins🫦'
 global.welcom1 = '⌗ Usa *setwelcome* para editar este mensaje'
 global.welcom2 = '⌗ Usa *setbye* para editar este mensaje'
-global.banner = 'https://files.catbox.moe/uq8da7.jpg'
-global.avatar = 'https://files.catbox.moe/6pmrwk.jpg'
+global.banner = 'https://qu.ax/ewHHS.jpg'
+global.avatar = 'https://qu.ax/oBByS.jpg'
 
-global.gp1 = 'https://chat.whatsapp.com/D9hmosKv0924sPqyXeu1CU'
-global.comunidad1 = 'https://chat.whatsapp.com/G6knC0f7kCZIG39iTZOTJw'
-global.channel = 'https://whatsapp.com/channel/0029Vagdmfv1SWt5nfdR4z3w'
+global.gp1 = 'https://chat.whatsapp.com/GBcSWbfm3JO1HhmbdbnrsH'
+global.comunidad1 = 'https://chat.whatsapp.com/KqkJwla1aq1LgaPiuFFtEY'
+global.channel = 'https://whatsapp.com/channel/0029Vb5UfTC4CrfeKSamhp1f'
 global.channel2 = global.channel
 global.md = 'https://github.com/The-King-Destroy/Yuki_Suou-Bot'
-global.correo = 'thekingdestroy507@gmail.com'
+global.correo = 'spjxd@gmail.com'
 global.cn = global.channel
 
 global.catalogo = fs.readFileSync('./src/catalogo.jpg')
@@ -60,7 +60,7 @@ global.estilo = {
   },
   message: {
     orderMessage: {
-      itemCount: -999999,
+      itemCount: -999999999,
       status: 1,
       surface: 1,
       message: global.packname,
@@ -71,7 +71,7 @@ global.estilo = {
   }
 }
 global.ch = {
-  ch1: '120363322713003916@newsletter'
+  ch1: '120363402846939411@newsletter'
 }
 
 global.cheerio = cheerio
@@ -86,7 +86,7 @@ global.rpg = {
     const emot = {
       level: '🌟 Nivel',
       coin: '💸 Coin',
-      exp: '✨ Exp',
+      exp: '🌻 Exp',
       bank: '🏦 Banco',
       diamond: '💎 Diamante',
       health: '❤️ Salud',
