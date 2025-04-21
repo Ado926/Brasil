@@ -1,5 +1,5 @@
 <h1 align="center">❀ Mai Bot ❀</h1> 
-<img src="https://qu.ax/JnOaO.jpg" alt="Mai Bot" />
+<img src="" alt="Mai Bot" />
 
 ❕️ **Información importante**
 
