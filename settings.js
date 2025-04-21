@@ -1,104 +1,92 @@
-import { watchFile, unwatchFile } from 'fs' 
+import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 import fs from 'fs'
 import cheerio from 'cheerio'
 import fetch from 'node-fetch'
 import axios from 'axios'
-import moment from 'moment-timezone' 
+import moment from 'moment-timezone'
 
-//*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
+// ✿━━━━━━✿•°:°•✿━━━━━━✿ XD
 
-//BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
-//Sólo aplica para opción 2 (ser bot con código de texto de 8 digitos)
-global.botNumber = '' //Ejemplo: 573218138672
-
-//*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
+global.botNumber = ''
 
 global.owner = [
-  ['393715279301', '🜲 Propietario 🜲', true],
-  ['59169739411'],
-  ['559296077349'],
-  ['50575083385'],
-  ['526721213770', 'daniel', true],
-  ['584124116239'],
-  [''],
-  [''],
-  [''],
-  [''],
-  [''],
-  ['']
-];
-
-//*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
+  ['50493732693', '♡ Wirk ♡', true]
+]
 
 global.mods = []
-global.suittag = ['393715279301'] 
+global.suittag = ['50493732693']
 global.prems = []
 
-//*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
-
 global.libreria = 'Baileys'
-global.baileys = 'V 6.7.16' 
+global.baileys = 'V 6.7.16'
 global.languaje = 'Español'
 global.vs = '2.2.0'
-global.nameqr = 'YukiBot-MD'
-global.namebot = '✿◟Yυƙι-Sυσυ-Bσƚ◞✿'
+global.nameqr = 'MaiBot-MD'
+global.namebot = '✿◟Mᴀɪ - Bᴏᴛ◞✿'
 global.sessions = 'Sessions'
-global.jadi = 'JadiBots' 
+global.jadi = 'JadiBots'
 global.yukiJadibts = true
 
-//*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
+global.packname = '🌸 Mᴀɪ • Bᴏᴛ 🌸'
+global.botname = '🌷 Mᴀɪ 🌷'
+global.wm = '💫 ᴘʀᴏᴄᴇssᴇᴅ ʙʏ ᴍᴀɪ-ʙᴏᴛ ʙʏ ᴡɪʀᴋ 💫'
+global.author = '🍡 By Wirk 🍡'
+global.dev = '🌼 Wirk Dev 🌼'
+global.textbot = '💖 Mᴀɪ-Bᴏᴛ • Wᴏʀʟᴅ ᴏғ Cᴜᴛᴇ 💖'
+global.etiqueta = '🌸 @Wirk 🌸'
 
-global.packname = '⪛✰sᥙmі sᥲkᥙrᥲsᥲᥕᥲ✰⪜'
-global.botname = '❀ sᥙmі sᥲkᥙrᥲsᥲᥕᥲ ❀'
-global.wm = 'ৎ୭࠭͢sᥙmі-ᑲ᥆𝗍𓆪͟͞ '
-global.author = 'Made By ৎ୭࠭͢𓆩𝕷͢𝖊𝖔፝֟፝֟፝֟፝֟፝֟፝֟𝖓𝖊𝖑𓆪'
-global.dev = '© ⍴᥆ᥕᥱrᥱძ ᑲᥡ ৎ୭࠭͢𓆩𝕷͢𝖊𝖔፝֟፝֟፝֟፝֟፝֟፝֟𝖓𝖊𝖑𓆪'
-global.textbot = 'sᥙmі-Bσƚ • Powered By ৎ୭࠭͢𓆩𝕷͢𝖊𝖔፝֟፝֟፝֟፝֟፝֟፝֟𝖓𝖊𝖑𓆪'
-global.etiqueta = 'ৎ୭࠭͢𓆩𝕷͢𝖊𝖔፝֟፝֟፝֟፝֟፝֟፝֟𝖓𝖊𝖑𓆪'
-
-//*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
-
-global.moneda = 'coin'
-global.welcom1 = '✎ Edita Con El Comando setwelcome'
-global.welcom2 = '✎ Edita Con El Comando setbye'
+global.moneda = 'MimiCoins🫦'
+global.welcom1 = '⌗ Usa *setwelcome* para editar este mensaje'
+global.welcom2 = '⌗ Usa *setbye* para editar este mensaje'
 global.banner = 'https://files.catbox.moe/uq8da7.jpg'
 global.avatar = 'https://files.catbox.moe/6pmrwk.jpg'
-
-//*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.gp1 = 'https://chat.whatsapp.com/D9hmosKv0924sPqyXeu1CU'
 global.comunidad1 = 'https://chat.whatsapp.com/G6knC0f7kCZIG39iTZOTJw'
 global.channel = 'https://whatsapp.com/channel/0029Vagdmfv1SWt5nfdR4z3w'
-global.channel2 = 'https://whatsapp.com/channel/0029Vagdmfv1SWt5nfdR4z3w'
+global.channel2 = global.channel
 global.md = 'https://github.com/The-King-Destroy/Yuki_Suou-Bot'
 global.correo = 'thekingdestroy507@gmail.com'
-global.cn ='https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T';
+global.cn = global.channel
 
-//*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
-
-global.catalogo = fs.readFileSync('./src/catalogo.jpg');
-global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: packname, orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
-global.ch = {
-ch1: '120363322713003916@newsletter',
+global.catalogo = fs.readFileSync('./src/catalogo.jpg')
+global.estilo = {
+  key: {
+    fromMe: false,
+    participant: '0@s.whatsapp.net',
+    ...(false ? { remoteJid: '5219992095479-1625305606@g.us' } : {})
+  },
+  message: {
+    orderMessage: {
+      itemCount: -999999,
+      status: 1,
+      surface: 1,
+      message: global.packname,
+      orderTitle: 'MaiBot',
+      thumbnail: global.catalogo,
+      sellerJid: '0@s.whatsapp.net'
+    }
+  }
 }
-
-//*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
+global.ch = {
+  ch1: '120363322713003916@newsletter'
+}
 
 global.cheerio = cheerio
 global.fs = fs
 global.fetch = fetch
 global.axios = axios
-global.moment = moment   
+global.moment = moment
 
 global.rpg = {
   emoticon(string) {
-    string = string.toLowerCase();
+    string = string.toLowerCase()
     const emot = {
       level: '🌟 Nivel',
       coin: '💸 Coin',
-      exp: '✨ Experiencia',
+      exp: '✨ Exp',
       bank: '🏦 Banco',
       diamond: '💎 Diamante',
       health: '❤️ Salud',
@@ -113,15 +101,16 @@ global.rpg = {
       iron: '⛓️ Hierro',
       coal: '🌑 Carbón',
       stone: '🪨 Piedra',
-      potion: '🥤 Poción',
-    };
-    const results = Object.keys(emot).map((v) => [v, new RegExp(v, 'gi')]).filter((v) => v[1].test(string));
-    if (!results.length) return '';
-    else return emot[results[0][0]];
-  }};
-global.rpgg = { 
+      potion: '🥤 Poción'
+    }
+    const results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
+    return results.length ? emot[results[0][0]] : ''
+  }
+}
+
+global.rpgg = {
   emoticon(string) {
-    string = string.toLowerCase();
+    string = string.toLowerCase()
     const emott = {
       level: '🌟',
       coin: '💸',
@@ -140,18 +129,16 @@ global.rpgg = {
       iron: '⛓️',
       coal: '🌑',
       stone: '🪨',
-      potion: '🥤',
-    };
-    const results = Object.keys(emott).map((v) => [v, new RegExp(v, 'gi')]).filter((v) => v[1].test(string));
-    if (!results.length) return '';
-    else return emott[results[0][0]];
-  }};  
-
-//*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
+      potion: '🥤'
+    }
+    const results = Object.keys(emott).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
+    return results.length ? emott[results[0][0]] : ''
+  }
+}
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
   unwatchFile(file)
-  console.log(chalk.redBright("Update 'settings.js'"))
+  console.log(chalk.redBright("✿ Archivo 'settings.js' actualizado ✿"))
   import(`${file}?update=${Date.now()}`)
 })
